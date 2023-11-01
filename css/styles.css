@@ -110,6 +110,20 @@ body {
     height: 4px;
     border-radius: 2px;
 }
+.underline-por {
+    position: relative;
+    color: var(--color-OCEAN);
+}
+.underline-por::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: var(--color-OCEAN);
+    border-radius: 2px;
+    width: 100%;
+}
 .contact-info {
     font-style: normal;
 }
