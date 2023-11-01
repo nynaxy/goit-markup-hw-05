@@ -10,7 +10,8 @@
     --color-CORNFLOWER: #E7E9FC;
     --color-CLOUD: #F4F4FD;
     --color-WHITE: #FFFFFF;
-    --color-LIGHT_STATE: rgba(142, 143, 153, 1)
+    --color-LIGHT_STATE: rgba(142, 143, 153, 1);
+    --color-DAIRY: rgba(252, 252, 252, 1);
 }
 img {
     display: block;
@@ -91,6 +92,20 @@ body {
 .main-element:hover,
 .main-element:focus {    
     color: #404bbf;
+}
+.underline {
+    position: relative;
+    
+}
+.underline::after {
+    position: absolute;
+    left: 0;
+    right: 2px;
+    bottom: -1px;
+    background-color: var(--color-OCEAN);
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
 }
 .contact-info {
     font-style: normal;
@@ -461,6 +476,10 @@ padding-bottom: 120px;
 }
 .port-im-element:hover,.port-im-element:focus {
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16);
+    transition-property: bavkground-color, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-300px);
 }
 .aaa {
     display: block;
@@ -491,4 +510,56 @@ padding-bottom: 120px;
     line-height: 1.5;
     letter-spacing: 0.02em;
 
+}
+/* modal*/
+.modal-yes{
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color:rgba(46, 47, 66, 0.4);
+transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-contain {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 408px;
+    height: 584px;
+    border-radius: 4px;
+    background-color: var(--color-DAIRY);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal-close-button {
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--color-CORNFLOWER);
+    box-shadow: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-button:hover,
+.modal-close-button:focus {
+    background-color: #404bbf;
+    border: none;
+    fill: #ffffff;
+}
+.modal-x {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-hidden {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
 }
