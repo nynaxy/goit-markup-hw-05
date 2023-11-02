@@ -500,6 +500,9 @@ padding-bottom: 120px;
 .aaa:hover, .aaa:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+.aaa:hover .pop-up,.aaa:focus .pop-up {
+    transform: translateY(0%);
+}
 .im-div {
     position: relative;
     overflow: hidden;
